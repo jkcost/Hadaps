@@ -33,7 +33,8 @@ The following files are needed:
 
 
 
-These files should be placed in the ./data/INDEX_NAME folder, e.g. ./data/DJIA/stocks_data.npy
+These files should be placed in the ./datasets/*(asset classes) folder, e.g. ./datasets/crypto/btc.csv
+also  All input data and index data must be included in the ./datasets/both folder
 
 ## Training
 
