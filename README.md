@@ -10,7 +10,7 @@ Furthermore, qualitative analysis shows \model' ability to adaptively shift port
 1. [Requirements](#Requirements)
 2. [Data Preparing]()
 3. [Training](Training)
-5. [Acknowledgement](Acknowledgement)
+
 
 
 
@@ -49,41 +49,16 @@ Some of the available arguments are:
 
 | Argument          | Description                                                | Default                     | Type  |
 | ----------------- | ---------------------------------------------------------- | --------------------------- | ----- |
-| `--config`        | Deafult configuration file                                 | hyper.json                  | str   |
-| `--window_len`    | Input window size                                          | 13 (weeks)                  | int   |
-| `--market`        | Stock market                                               | DJIA                        | str   |
-| `--G`             | The number of stocks participating in long/short each time | 4 (for DJIA)                | int   |
+| `--rl_method`        | Deafult configuration file                                 | hyper.json                  | str   |
+| `--window_size`    | Input window size                                          | 13 (weeks)                  | int   |
+| `--discount_factor`        | Stock market                                               | DJIA                        | str   |
+| `--ta_parameter`             | The number of stocks participating in long/short each time | 4 (for DJIA)                | int   |
 | `--batch_size`    | Batch size number                                          | 37                          | Int   |
 | `--lr`            | learning rate                                              | 1e-6                        | float |
-| `--gamma`         | Coefficient for adjusting lr between ASU and MSU           | 0.05                        | float |
-| `--no_spatial`    | Whether to use spatial attention and GCN layer in ASU      | True                        | bool  |
-| `--no_msu`        | Whether to use market scoring unit                         | True                        | bool  |
-| `--relation_file` | File name for relation matrix used in GCN layer            | Industry_classification.npy | str   |
-| `--addaptiveadj`  | Whether to use addaptive matrix in GCN (Eq. 2)             | True                        | Bool  |
+| `--automatic_entropy_tuning`         | Coefficient for adjusting lr between ASU and MSU           | 0.05                        | float |
+| `--tau`    | Whether to use spatial attention and GCN layer in ASU      | True                        | bool  |
+| `--alpha`        | Whether to use market scoring unit                         | True                        | bool  |
 
 
 
-## Acknowledgement
 
-This project would not have been finished without using the codes or files from the following open source projects:
-
-- Environment.py is inspired by [PGPortfolio](https://github.com/ZhengyaoJiang/PGPortfolio)
-- README.md is inspired by [HPSG-Neural-Parser](https://github.com/DoodleJZ/HPSG-Neural-Parser#Requirements)
-
-
-## Reference
-
-Please cite our work if you find our code/paper is useful to your work.
-
-```
-@article{Wang_2021, 
-title={DeepTrader: A Deep Reinforcement Learning Approach for Risk-Return Balanced Portfolio Management with Market Conditions Embedding}, 
-author={Wang, Zhicheng and Huang, Biwei and Tu, Shikui and Zhang, Kun and Xu, Lei}, 
-journal={Proceedings of the AAAI Conference on Artificial Intelligence}, 
-volume={35}, 
-number={1}, 
-year={2021}, 
-month={May}, 
-pages={643-650} 
-}
-```
