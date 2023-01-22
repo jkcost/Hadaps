@@ -33,7 +33,8 @@ The following files are needed:
 
 
 
-These files should be placed in the ./data/INDEX_NAME folder, e.g. ./data/DJIA/stocks_data.npy
+These files should be placed in the ./datasets/*(asset classes) folder, e.g. ./datasets/crypto/btc.csv
+also all input data and index data must be included in the ./datasets/both folder
 
 ## Training
 
@@ -52,8 +53,7 @@ Some of the available arguments are:
 | `--batch_size`    | Batch size number                                          | 32                          | Int   |
 | `--lr`            | learning rate                                              | 1e-5                        | float |
 | `--tau`         | target smoothing coefficient(τ)         | 0.005                        | float |
-| `--alpha`    | Temperature parameter α determines the relative importance of the entropy\
-                            term against the reward     | 0.2                       | float  |
+| `--alpha`    | Temperature parameter α determines the relative importance of the entropy  term against the reward     | 0.2       | float  |
 | `--automatic_entropy_tuning`        | Automaically adjust α                       | False                       | bool  |
 
 
